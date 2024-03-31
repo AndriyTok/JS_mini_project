@@ -1,8 +1,3 @@
-// На странице post-details.html:
-// // 7 Вивести всю, без виключення, інформацію про об'єкт post на який клікнули .
-// // 8 Нижчє інформаці про пост, вивести всі коментарі поточного поста (ендпоінт  -
-// //     https://jsonplaceholder.typicode.com/posts/POST_ID/comments)
-
 const post = JSON.parse(localStorage.getItem('selected_post'));
 const post_div = document.createElement('div');
 post_div.innerHTML = `<h2>Post ${post.id} details:</h2>
