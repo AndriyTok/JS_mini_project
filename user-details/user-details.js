@@ -31,7 +31,10 @@ user_posts_button.addEventListener('click', async()=> {
         div_for_posts.innerHTML = `<h3>Posts of ${selected_user.name}</h3>`
         posts.forEach(post => {
             const postLink = document.createElement('a');
-            postLink.href='post-details.html?postId=${post.id}';
+            postLink.addEventListener('click', ()=>{
+                localStorage.setItem('selected_post', JSON.stringify(post));
+                window.open(`../post-details/post-details.html?postId=${post.id}`, '_blank');
+            })
             postLink.innerText = post.title;
             postLink.style.display='block';
             div_for_posts.appendChild(postLink)

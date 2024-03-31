@@ -11,7 +11,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
             button.innerText = 'More';
             button.addEventListener('click', ()=> {
                 localStorage.setItem('selected_user', JSON.stringify(user));
-                window.open('user-details.html', '_blank');
+                window.open('../user-details/user-details.html', '_blank');
             })
 
             user_div.appendChild(button);
